@@ -43,7 +43,7 @@ git tag [-d|--delete] <TagName>
 ```bash
 git push origin --delete <TagName>
 
-# 或使用
+# 或使用(不推荐)
 git push origin :refs/tags/<TagName>
 ```
 
