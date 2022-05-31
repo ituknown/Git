@@ -175,7 +175,7 @@ git push origin --tags
 $ git tag [-d|--delete] <TagName>
 ```
 
-**2删除删除远程标签：**
+**删除删除远程标签：**
 
 ```bash
 $ git push origin --delete <TagName>
@@ -217,7 +217,7 @@ $ git push origin <NewTagName>
 $ git pull --prune --tags
 ```
 
-# 基于指定 tag 检出代码
+# 基于指定标签检出代码
 
 ```bash
 $ git checkout <TagName>
