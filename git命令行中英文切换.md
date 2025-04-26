@@ -1,7 +1,7 @@
 Mac 升级之后，发现 git 命令行变成中文了：
 
 <div style="text-align: left;">
-  <img src="http://git-media.knowledge.ituknown.cn/LANG/git-status-chinese.png" alt="git-status-chinese.png" width="500" />
+  <img src="https://ituknown.cn/git-media/LANG/git-status-chinese.png" alt="git-status-chinese.png" width="500" />
 </div>
 
 显得好low......
@@ -23,5 +23,5 @@ alias git='LANG=en_GB.UTF-8 git'
 然后将这条 alias 写到配置文件即可，效果如下：
 
 <div style="text-align: left;">
-  <img src="http://git-media.knowledge.ituknown.cn/LANG/git-status-english.png" alt="git-status-english.png" width="500" />
+  <img src="https://ituknown.cn/git-media/LANG/git-status-english.png" alt="git-status-english.png" width="500" />
 </div>
