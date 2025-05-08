@@ -8,7 +8,7 @@ git config --global core.quotePath false
 
 示例：
 
-![git-status乱码-1639887120rGTyu1GBhT](https://ituknown.cn/git-media/中文乱码/git-status乱码-1639887120rGTyu1GBhT.png)
+![git-status乱码-1639887120rGTyu1GBhT](https://ituknown.org/git-media/中文乱码/git-status乱码-1639887120rGTyu1GBhT.png)
 
 # Commit/Log 乱码
 
