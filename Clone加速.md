@@ -4,7 +4,7 @@
 error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504 Gateway Time-out
 ```
 
-解决该问题可以使用 `--depth` 参数，后面跟一个数值，用于指定克隆深度，比如为1即表示只克隆最近一次commit。
+解决该问题可以使用 `--depth` 参数，后面跟一个数值，用于指定克隆深度，比如为 1 即表示只克隆最近一次 commit。
 
 示例：
 ```bash
