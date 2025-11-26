@@ -54,7 +54,6 @@ Date:   Wed May 13 16:04:40 2020 +0800
 
 不急，git 提供了一个 `reset` 命令，用于版本回退。
 
-
 # 撤销未 push 到远程的 Merge 或 Commit
 
 `git reset` 命令就是用于版本回退，这个可用于回退到指定版本以及回退到上个版本。
@@ -69,7 +68,7 @@ option 就是执行 reset 的选项，稍后说。其后跟的是版本号，比
 
 示例（红色框标记的就是 commit_id）：
 
-![git-log-1644677941cU4sE0](https://ituknown.org/git-media/BranchManager/git-log-1644677941cU4sE0.png)
+![git-log-1644677941cU4sE0](https://media.ituknown.org/git-media/BranchManager/git-log-1644677941cU4sE0.png)
 
 **所以，对于已经 commit（或执行 Merge 后生成一个 commit）的操作，我们只需要将版本回退到 commit 之前的一个版本即可。**
 
@@ -84,7 +83,6 @@ $ git reset --hard [HEAD^ | HEAD~1 | commit_id]
 ```
 
 **也就是说，在实际执行撤销操作时我们一定必须选择这三个可选项中的其中一个！！！！**
-
 
 ## git reset --soft
 
@@ -102,10 +100,9 @@ Changes to be committed:
 	modified:   README.md
 ```
 
-从 `git status` 命令的日志中可以看到， `README.md` 文件已经被撤销 `commit` 操作，但是依然在工作空间中（`add`）。
+从 `git status` 命令的日志中可以看到， `README.md` 文件已经被撤销 `commit` 操作，但是依然在工作空间中（ `add` ）。
 
 所以，现在文件虽然被撤销了 `commit` 操作，但是并没有从工作空间中撤销，这里需要注意！
-
 
 ## git reset --mixed(推荐)
 
@@ -137,7 +134,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 $ git reset HEAD~1
 ```
 
-
 ## git reset --hard
 
 该命令是一个相对危险的操作，因为该命令在 `--mixed` 的基础之上还撤销的文件的修改操作！即还原文件原本状态！
@@ -162,14 +158,13 @@ HEAD is now at 55cf413 Initial commit
 
 所以，该命令要慎用！
 
-
 # 撤销已提交远程的 commit 及版本回退
 
 如果 commit 操作已经 push 到远程也是做同样的操作，找到要撤销的版本的之前的任意一次提交记录（**一般称为版本回退**）。
 
 如下：
 
-![git-log-rollbackid-1644677934gU3mB2](https://ituknown.org/git-media/BranchManager/git-log-rollbackid-1644677934gU3mB2.png)
+![git-log-rollbackid-1644677934gU3mB2](https://media.ituknown.org/git-media/BranchManager/git-log-rollbackid-1644677934gU3mB2.png)
 
 这里我要将版本回退到 “Fix trailing space” 这个版本，对应的提交记录是：83ebc604fb2e94461e2c2c597545c59cb1705cbc。
 
@@ -223,13 +218,12 @@ Already up-to-date.
 
 即先将你要强制 push 的分支取消受保护，但是 **强推成功后一定要重新添加为受保护的分支**！！
 
-![git-branch-unprotect-1644677911eJ6cF0](https://ituknown.org/git-media/BranchManager/git-branch-unprotect-1644677911eJ6cF0.png)
-
+![git-branch-unprotect-1644677911eJ6cF0](https://media.ituknown.org/git-media/BranchManager/git-branch-unprotect-1644677911eJ6cF0.png)
 
 # 总结
 
-`git reset` 命令主要是用于撤销操作，我们最常使用的就是 `--soft` 、 `--mixed` 以及 `--hard`。三者之间的关系是层层递进！
+`git reset` 命令主要是用于撤销操作，我们最常使用的就是 `--soft` 、 `--mixed` 以及 `--hard` 。三者之间的关系是层层递进！
 
-`--soft` 用于撤销 `commit file` 操作，即回退到 `add file`。
-`--mixed` 比较 `--soft`就更加强势，直接回退到 `change file`，也是推荐的方式。
+`--soft` 用于撤销 `commit file` 操作，即回退到 `add file` 。
+`--mixed` 比较 `--soft` 就更加强势，直接回退到 `change file` ，也是推荐的方式。
 `--hard` 则是直接放弃本次修改。该命令比较危险！
